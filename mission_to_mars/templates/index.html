@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Mars Jumbo Tron Display -->
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="../scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <!-- Row 1: Latest Mars News -->
+    <div class="row" id="mars_news">
+      <div class="col-md-12">
+        <h3 class="h3_border"><strong>Latest Mars News</strong></h3>
+        <h4><strong>{{mars_data.news_title}}</strong></h4>
+        <p>{{mars_data.news_p}}</p>
+      </div>
+    </div>
+
+    <!-- Row 2: Featured Mars Image and Mars Facts Table -->
+    <div class="row">
+      <div class="col-md-8">
+        <h3><strong>Featured Mars Image</strong></h3>
+        <img src="{{ mars_data.featured_image }}" alt="Mars Featured Image">
+      </div>
+
+      <div class="col-md-4">
+        <h3><strong>Mars Facts</strong></h3>
+        <div class="table-responsive">
+          <table border="1" class="table dataframe table dataframe table-striped justify-content-end">
+            <thead>
+              <tr style="text-align: right;">
+                <th>Attribute</th>
+                <th>Mars</th>
+                <th>Earth</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Diameter:</th>
+                <td>6,779 km</td>
+                <td>12,742 km</td>
+              </tr>
+              <tr>
+                <th>Mass:</th>
+                <td>6.39 × 10^23 kg</td>
+                <td>5.97 × 10^24 kg</td>
+              </tr>
+              <tr>
+                <th>Moons:</th>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>Distance from Sun:</th>
+                <td>227,943,824 km</td>
+                <td>149,598,262 km</td>
+              </tr>
+              <tr>
+                <th>Length of Year:</th>
+                <td>687 Earth days</td>
+                <td>365.24 days</td>
+              </tr>
+              <tr>
+                <th>Temperature:</th>
+                <td>-87 to -5 °C</td>
+                <td>-88 to 58°C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Row 3: Hemisphere Images -->
+    <div class="row">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="h3_border"><strong>Mars Hemispheres</strong></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+            <img src="{{mars_data.hemisphere_images[0]['img_url']}}" alt="Valles Marineris Hemisphere" class="thumb" width="85%">
+            <h4 class="justify-content-start"><strong>{{mars_data.hemisphere_images[0]['title']}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+          <img src="{{mars_data.hemisphere_images[1]['img_url']}}" alt="Cerberus Hemisphere" class="thumb" width="85%">
+          <h4 class="justify-content-start"><strong>{{mars_data.hemisphere_images[1]['title']}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+          <img src="{{mars_data.hemisphere_images[2]['img_url']}}" alt="Schiaparelli Hemisphere" class="thumb" width="85%">
+          <h4 class="justify-content-start"><strong>{{mars_data.hemisphere_images[2]['title']}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+          <img src="{{mars_data.hemisphere_images[3]['img_url']}}" alt="Syrtis Major Hemisphere" class="thumb" width="85%">
+          <h4 class="justify-content-start"><strong>{{mars_data.hemisphere_images[3]['title']}}</strong></h4>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
