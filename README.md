@@ -2,7 +2,7 @@
 
 ## Background 
 
-The purpose of this assignment was to build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The assignment was broken down into two portions: scraping and and flask application
+The purpose of this assignment was to build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The assignment was broken down into two portions: scraping and the flask application. 
 
 ### Scraping 
 
